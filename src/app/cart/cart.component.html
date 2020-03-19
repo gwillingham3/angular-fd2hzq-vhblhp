@@ -6,3 +6,7 @@
   <a [title]="item.name" [routerLink]="['/products', item.id]"><span>{{ item.name }}</span></a>
   <span>{{ item.price | currency }}</span>
 </div>
+
+<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm.value)">
+  <button class="button" type="submit">Purchase</button>
+</form>
